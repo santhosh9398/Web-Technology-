@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>CANVAS</u></h1>
+    <canvas id="element" width="300px" style="border: 1px solid black;">
+    </canvas>
+    <canvas id="ele">
+    </canvas>
+    <script>
+        var canvas=document.getElementById("element");
+        var c=canvas.getContext("2d")
+        c.beginPath();
+        c.moveTo(0, 0);
+        c.lineTo(300, 150);
+        c.stroke();
+        var second=document.getElementById("ele");
+        var d=second.getContext("2d");
+        d.fillRect(100,0,200,200);
+    </script>
+</body>
+</html>

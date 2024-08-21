@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local server</title>
+</head>
+<body>
+    <h1>login details</h1>
+    <form>
+        <fieldset>
+            <legend>
+                Login details
+            </legend>
+            <label for="name">Username:</label>
+            <input type="text" name="name" id="name" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <input type="submit" onclick="save()">
+        </fieldset>
+    </form>
+    <script>
+        function save(){
+            var user=document.getElementById("name").value;
+            localStorage.setItem("name",user);
+            var pass=document.getElementById("password").value;
+            localStorage.setItem("password",pass);
+        }
+    </script>
+</body>
+</html>
